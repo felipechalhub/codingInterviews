@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class plusOne {
 	public static void main(String[] args) {
 	
-	int [] digits  = {1,2,4};
+	int [] digits  = {9};
 	System.out.println(Arrays.toString(plusOne(digits)));
 		
 	}
@@ -21,6 +21,6 @@ public class plusOne {
     	}
     	int [] newDigits = new int [lastIndex+1];
     	newDigits[0] = 1;
-    	return digits;
+    	return newDigits;
     }
 }
