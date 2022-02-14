@@ -1,5 +1,7 @@
 package leetCode;
 
+import java.util.Arrays;
+
 public class RemoveDuplicateFromSortedArray {
 	public static void main(String[] args) {
 		
@@ -17,8 +19,7 @@ public class RemoveDuplicateFromSortedArray {
     			count++;
     		}
 		}
-    	
 		return count;
-        
     }
 }
+//0,1,2,3,4,2,2,3,3,4
