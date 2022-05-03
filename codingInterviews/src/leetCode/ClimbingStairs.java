@@ -2,7 +2,7 @@ package leetCode;
 
 public class ClimbingStairs {
 	public static void main(String[] args) {
-		int n =8;
+		int n =3;
 		System.out.println(climbStairs(n));
 	}
     public static int climbStairs(int n) {

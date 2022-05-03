@@ -7,11 +7,10 @@ import java.util.Map;
 public class twoSum {
 	public static void main(String[] args) {
 
-		int[] nums = { 3,2,4 };
+		int[] nums = { 3, 3 };
 		int target = 6;
 
 		System.out.println(Arrays.toString(twoSum(nums, target)));
-	
 
 	}
 //BRUTE FORCE
@@ -29,28 +28,46 @@ public class twoSum {
 //		return ans;
 //
 //	}
-	
+
 //FASTER
-	public static int[] twoSum(int[] nums, int target) {
+//	public static int[] twoSum(int[] nums, int target) {
+//		
+//		Map<Integer, Integer> num_map = new HashMap<>();
+//		
+//		for (int i = 0; i < nums.length; i++) {
+//			int complement  = target - nums[i];
+//			
+//			if(num_map.containsKey(complement)) {
+//				int ans[] = {num_map.get(complement), i};
+//				return ans;
+//			}
+//			num_map.put(nums[i], i);
+//		}
+//
+//		// 3 -> 0
+//		// 4 -> 1
+//		// 2 -> 2
+//		
+//		return new int [] {0,0};
+//		
+//	}
+
+	private static int[] twoSum(int[] nums, int target) {
 		
 		Map<Integer, Integer> num_map = new HashMap<>();
-		
 		for (int i = 0; i < nums.length; i++) {
-			int complement  = target - nums[i];
-			
-			if(num_map.containsKey(complement)) {
-				int ans[] = {num_map.get(complement), i};
-				return ans;
-			}
-			num_map.put(nums[i], i);
-		}
-
-		// 3 -> 0
-		// 4 -> 1
-		// 2 -> 2
+			int complement = target - nums[i];
 		
-		return new int [] {0,0};
+		if(num_map.containsKey(complement)) {
+		int [] ans = {num_map.get(complement), i};	
+		return ans;
+		}
+		num_map.put(nums[i],i);
+	}		
+		
+		
+		
+		return nums;
 		
 	}
-
 }
