@@ -11,20 +11,20 @@ public class SalesByMatch2 {
 
     }
     public static int sockMerchant(int n, List<Integer> ar) {
-        int count = 0;
+        int ans = 0;
         List<Integer> set = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            if(set.contains(ar.get(i)))
-            {
-                set.remove(ar.get(i));
-                count++;
-            }
-            else
-            {
-                set.add(ar.get(i));
-            }
+           if(set.contains(ar.get(i))){
+               set.remove(ar.get(i));
+               ans++;
+           }
+           else{
+               set.add(ar.get(i));
+
+           }
         }
-        return count;
+
+        return ans;
     }
 
 }
